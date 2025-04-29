@@ -6,20 +6,18 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 10:32:00 by msimoes           #+#    #+#             */
-/*   Updated: 2025/04/29 14:49:19 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/04/29 15:39:58 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int ft_count(int n)
+static int ft_count(long n)
 {
 	int i;
 
 	i = 0;
-	if (n == -2147483648)
-		return (11);
-	else if (n == 0)
+	if (n == 0)
 		return (1);
 	if (n < 0)
 	{
@@ -34,37 +32,27 @@ static int ft_count(int n)
 	return (i);
 }
 
-int	ft_putnbr(int n)
+int	ft_putnbr(long n)
 {
 	int i;
 
-	if (n == -2147483648)
+	i = ft_count(n);
+	if (n < 0)
 	{
 		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
 	else
-	{
-		if (n < 0)
-		{
-			ft_putchar('-');
-			n = -n;
-		}
-		if (n >= 10)
-		{
-			ft_putnbr(n / 10);
-			ft_putnbr(n % 10);
-		}
-		else
-			ft_putchar(n + '0');
-	}
+		ft_putchar(n + '0');
 	return (i);
 }
 
-/*
 int main()
 {
 	printf("%d", ft_putnbr(147483648));
 }
-*/
