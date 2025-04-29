@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 10:32:00 by msimoes           #+#    #+#             */
-/*   Updated: 2025/04/29 15:39:58 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/04/29 16:47:07 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,9 @@ int	ft_putnbr(long n)
 	return (i);
 }
 
+/*
 int main()
 {
 	printf("%d", ft_putnbr(147483648));
 }
+*/
