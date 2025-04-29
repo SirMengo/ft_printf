@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:30:07 by msimoes           #+#    #+#             */
-/*   Updated: 2025/04/28 10:48:36 by msimoes          ###   ########.fr       */
+/*   Created: 2025/04/29 11:44:29 by msimoes           #+#    #+#             */
+/*   Updated: 2025/04/29 13:36:18 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include "libft/libft.h"
-#endif
+#include "libftprintf.h"
+
+int	ft_putchar(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
