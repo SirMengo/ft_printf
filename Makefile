@@ -6,43 +6,33 @@
 #    By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 12:46:46 by msimoes           #+#    #+#              #
-#    Updated: 2025/04/28 10:15:58 by msimoes          ###   ########.fr        #
+#    Updated: 2025/05/01 15:19:35 by msimoes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRCS = 
+SRCS = ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c ft_putptr.c \
+		ft_putstr.c ft_putuns.c
 
-SRCS_BONUS = 
-				
 COMP_LIB = ar rcs
 RM = rm -f
 CC = cc
 CC_FLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
-OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-
 
 %.o : %.c
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 all: $(NAME)
 
-bonus: $(OBJS) $(OBJS_BONUS)
-	$(COMP_LIB) $(NAME) $(OBJS) $(OBJS_BONUS)
-	@touch bonus
-
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
-	@touch bonus
-	@rm bonus
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
 
 $(NAME): $(OBJS) 
 	$(COMP_LIB) $(NAME) $(OBJS)

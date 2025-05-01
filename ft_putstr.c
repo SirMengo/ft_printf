@@ -6,17 +6,17 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:49:16 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 11:00:18 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 15:50:59 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {
 	int	i;
 	
-	i = 2;
+	i = 0;
 	while (str[i])
 	{
 		ft_putchar(str[i]);

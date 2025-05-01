@@ -6,34 +6,37 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 10:32:00 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 11:06:51 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 15:51:11 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_putnbr(long n)
+int	ft_putnbr(int n)
 {
-	int i;
+	int 	i;
+	long	j;
 
+	j = n;
 	i = 0;
-	if (n < 0)
+	if (j < 0)
 	{
 		i += ft_putchar('-');
-		n = -n;
+		j = -j;
 	}
-	if (n >= 10)
+	if (j >= 10)
 	{
-		i += ft_putnbr(n / 10);
-		i += ft_putnbr(n % 10);
+		i += ft_putnbr(j / 10);
+		i += ft_putnbr(j % 10);
 	}
 	else
-		i += ft_putchar(n + '0');
+		i += ft_putchar(j + '0');
 	return (i);
 }
+
 /*
 int main()
 {
-	printf("\n%d", ft_putnbr(147483648));
-}
-*/
+	printf("\n%d", ft_putnbr(9999999999999));
+
+}*/
