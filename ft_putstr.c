@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:49:16 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 15:50:59 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 16:10:26 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 int	ft_putstr(char *str)
 {
 	int	i;
-	
+	if(!str)
+	{
+		write(1,"(null)", 6);
+		return (6);
+	}
 	i = 0;
 	while (str[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 10:29:51 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 15:51:05 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 16:11:03 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ int	ft_putptr(size_t n)
 {
 	int	i;
 	const char	*hex = "0123456789abcdef";
-
+	if(!n)
+	{
+		write(1,"(nil)", 5);
+		return (5);
+	}
 	i = 2;
 	if (n > 15)
 		i += ft_putptr(n / 16);
