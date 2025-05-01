@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:28:17 by msimoes           #+#    #+#             */
-/*   Updated: 2025/04/29 18:00:05 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/04/30 16:48:46 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int ft_hexputnbr(unsigned int	n, unsigned char	c)
 		i += ft_putchar(hexlo[n % 16]);
 	return (i);
 }
- /*
+
+/*
 int main()
 {
-	int i = 25567;
+	int i = 15;
 	char c = 'X';
 	ft_hexputnbr(i, c);
 	printf("\n");

@@ -1,52 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsputnbrc.c                                    :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 10:32:00 by msimoes           #+#    #+#             */
-/*   Updated: 2025/04/29 14:49:12 by msimoes          ###   ########.fr       */
+/*   Created: 2025/04/30 10:29:51 by msimoes           #+#    #+#             */
+/*   Updated: 2025/05/01 11:04:13 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int ft_unscount(unsigned int n)
+int	ft_putptr(size_t n)
 {
-	int i;
+	int	i;
+	const char	*hex = "0123456789abcdef";
 
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n > 0)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
-}
-
-int	ft_unsputnbr(unsigned int n)
-{
-	int i;
-
-	i = ft_unscount(n);
-	if (n >= 10)
-	{
-		ft_unsputnbr(n / 10);
-		ft_unsputnbr(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
+	i = 2;
+	if (n > 15)
+		i += ft_putptr(n / 16);
+	i += ft_putchar(hex[n % 16]);
 	return (i);
 }
 
 /*
 int main()
 {
-	int i = -123456789;
-	printf("%u \n", i);
-	ft_unsputnbr(i);
+	char *str = "abcd";
+	void *ptr = (void *)str;
+
+	printf("%p\n", ptr);
+	ft_putptr((size_t)ptr);
 }
 */
