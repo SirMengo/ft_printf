@@ -6,15 +6,15 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 11:14:38 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 16:27:34 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 19:25:51 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int sort_format(char const c, va_list ap)
+static int	sort_format(char const c, va_list ap)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (c == 'c')
@@ -36,18 +36,18 @@ static int sort_format(char const c, va_list ap)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list ap;
+	va_list	ap;
 	int		i;
-	int 	count;
+	int		count;
 
 	i = 0;
 	count = 0;
 	va_start(ap, format);
-	if(!format || (format[0] == '%' && format[1] == '\0'))
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	while(format[i])
+	while (format[i])
 	{
-		if(format[i] == '%')
+		if (format[i] == '%')
 		{
 			count += sort_format(format[i + 1], ap);
 			i++;
@@ -59,14 +59,3 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
-
-/*
-int main()
-{
-	char *str = "abc";
-	//ft_printf("\n%c woop %s %p %d %i %u %x %X %%", 'a', "abc", str, 12345, 12345, -12345, -12345, -12345);
-	//printf("\n%c woop %s %p %d %i %u %x %X %%", 'a', "abc", str, 12345, 12345, -12345, -12345, -12345);
-	printf("%p %p",str ,0);
-	ft_printf("%p %p",str ,0);
-}
-*/

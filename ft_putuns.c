@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 10:32:00 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 15:50:54 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 19:26:29 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putuns(unsigned int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n >= 10)

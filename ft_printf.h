@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:30:07 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 16:27:00 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 19:21:17 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_putchar(int c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);
 int	ft_putuns(unsigned int n);
-int ft_puthex(unsigned int n, unsigned char c);
+int	ft_puthex(unsigned int n, unsigned char c);
 int	ft_printf(const char *format, ...);
-int ft_address(size_t n);
+int	ft_address(size_t n);
 
 #endif
