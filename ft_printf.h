@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:30:07 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 15:21:03 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 16:27:00 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	ft_putnbr(int n);
 int	ft_putuns(unsigned int n);
 int ft_puthex(unsigned int n, unsigned char c);
 int	ft_printf(const char *format, ...);
-int	ft_putptr(size_t n);
+int ft_address(size_t n);
 
 #endif

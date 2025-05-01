@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 11:14:38 by msimoes           #+#    #+#             */
-/*   Updated: 2025/05/01 15:50:18 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/05/01 16:27:34 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int sort_format(char const c, va_list ap)
 	else if (c == 's')
 		i += ft_putstr(va_arg(ap, char *));
 	else if (c == 'p')
-		i += ft_putstr("0x") + ft_putptr(va_arg(ap, size_t));
+		i += ft_address(va_arg(ap, size_t));
 	else if (c == 'd' || c == 'i')
 		i += ft_putnbr(va_arg(ap, int));
 	else if (c == 'u')
@@ -64,7 +64,9 @@ int	ft_printf(const char *format, ...)
 int main()
 {
 	char *str = "abc";
-	ft_printf("\n%c woop %s %p %d %i %u %x %X %%", 'a', "abc", str, 12345, 12345, -12345, -12345, -12345);
-	printf("\n%c woop %s %p %d %i %u %x %X %%", 'a', "abc", str, 12345, 12345, -12345, -12345, -12345);
+	//ft_printf("\n%c woop %s %p %d %i %u %x %X %%", 'a', "abc", str, 12345, 12345, -12345, -12345, -12345);
+	//printf("\n%c woop %s %p %d %i %u %x %X %%", 'a', "abc", str, 12345, 12345, -12345, -12345, -12345);
+	printf("%p %p",str ,0);
+	ft_printf("%p %p",str ,0);
 }
 */
